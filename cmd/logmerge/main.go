@@ -56,9 +56,8 @@ func main() {
 
       // Filter using control flow + comparison
       if event.Level.Enabled(minLevel) {
-        fmt.Printf("[%s] [%s] [%v] [%s] %s\n",
-          event.Timestamp.Format("2006-01-22 15:04:05"),
-          event.Timestamp.Format("15:04:05"),
+        fmt.Printf("[%s] [%v] [%s] %s\n",
+          event.Timestamp.Format("2006-01-02 15:04:05"),
           event.Level,
           event.Source,
           event.Message,
