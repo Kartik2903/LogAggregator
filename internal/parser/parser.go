@@ -7,7 +7,7 @@ import (
   "logmerge/internal/models"
 )
 
-//converts a raw log line string into a LogEvent struct.
+//converts a raw log line string into a LogEvent struct
 func ParseLogLine(line string, source string) models.LogEvent {
 
   // split the log line into parts using spaces
