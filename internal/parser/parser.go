@@ -13,7 +13,7 @@ func ParseLogLine(line string, source string) models.LogEvent {
   // split the log line into parts using spaces
   parts := strings.Fields(line)
 
-  // if log line is too short, parsing is impossible
+  // itoo short
   if len(parts) < 3 {
     return models.NewLogEvent(
       time.Now(),
