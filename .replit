@@ -1,0 +1,45 @@
+entrypoint = "main.go"
+run = "go run ./cmd/logmerge"
+
+modules = ["go-1.21"]
+
+[env]
+GOPATH="$REPL_HOME/gopath"
+
+[nix]
+channel = "stable-24_05"
+
+[gitHubImport]
+requiredFiles = [".replit"]
+
+[deployment]
+build = "CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o main"
+run = "./main"
+ignorePorts = false
+deploymentTarget = "gce"
+
+[agent]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run LogMerge"
+
+[[workflows.workflow]]
+name = "Run LogMerge"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "go run ./cmd/logmerge/main.go --file frontend.log --file api.log --file auth.log --level INFO"
+
+[workflows.workflow.metadata]
+outputType = "console"
