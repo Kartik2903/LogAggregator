@@ -21,14 +21,14 @@ func main() {
 
 
   if len(files) == 0 {
-    fmt.Println("Error: No files provided")
-    fmt.Println(`Example: go run ./cmd/logmerge --file frontend.log --file api.log --level WARN`)
+    fmt.Println("No files provided")
+    fmt.Println(`go run ./cmd/logmerge --file frontend.log --file api.log --level WARN`)
     return
   }
 
   minLevel := models.ParseLogLevel(*levelStr)
 
-  // Use switch (control flow example)
+  //switch
   switch minLevel {
   case models.INFO, models.WARN, models.ERROR:
     fmt.Println("Filter level set to:", minLevel)
