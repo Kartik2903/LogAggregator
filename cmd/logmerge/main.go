@@ -49,7 +49,7 @@ func main() {
     }
 
     // Looping through slice of lines
-    for _, line := range lines {
+    for _u, line := range lines {
 
       // Parse raw log line -> LogEvent
       event := parser.ParseLogLine(line, file)
@@ -57,7 +57,7 @@ func main() {
       // Filter using control flow + comparison
       if event.Level.Enabled(minLevel) {
         fmt.Printf("[%s] [%v] [%s] %s\n",
-          event.Timestamp.Format("2006-01-02 15:04:05"),
+          event.Timestamp.Format("15:04:05"),
           event.Level,
           event.Source,
           event.Message,
