@@ -1,5 +1,5 @@
 entrypoint = "main.go"
-run = "go run ./cmd/logmerge"
+run = "go run ./cmd/logmerge --file *.log --level INFO"
 
 modules = ["go-1.21"]
 

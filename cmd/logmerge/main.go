@@ -9,6 +9,32 @@ import (
   "logmerge/internal/source"
 )
 
+// Function used when --stats flag is enabled
+func printStatistics(storage *models.LogStorage, buffer *models.LogBuffer) {
+
+  fmt.Println("\n=== LOG STATISTICS ===")
+
+  sources := storage.GetAllSources()
+  fmt.Printf("Total sources: %d\n", len(sources))
+
+  for idx, source := range sources {
+
+    events := storage.GetEventsBySource(source)
+    meta, exists := storage.GetSourceMetadata(source)
+
+    fmt.Printf("%d. Source: %s\n", idx+1, source)
+    fmt.Printf("   Events: %d\n", len(events))
+
+    if exists {
+      fmt.Printf("   Errors: %d\n", meta.ErrorCount)
+      fmt.Printf("   Last seen: %s\n", meta.LastSeen.Format("15:04:05"))
+    }
+  }
+
+  fmt.Println("\n=== BUFFER STATISTICS ===")
+  fmt.Printf("Total events in buffer: %d\n", buffer.Count())
+}
+
 func main() {
 
   // LAB 1: variables + slice

@@ -7,7 +7,7 @@ import (
   "logmerge/internal/models"
 )
 
-// Interface (Lab 6 concept — OK to keep)
+// Interface (Lab 6 concept)
 type Parser interface {
   ParseLogLine(line string, source string) (models.LogEvent, error)
 }
