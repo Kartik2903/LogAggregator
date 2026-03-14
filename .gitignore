@@ -20,3 +20,7 @@ gopath/
 
 # Go workspace file
 go.work
+
+# Replit configuration
+.replit
+replit.md
