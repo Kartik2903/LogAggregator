@@ -1,0 +1,15 @@
+2025-06-15 10:00:02 INFO - Server listening on port 8080
+2025-06-15 10:00:04 INFO - Accepted connection from 192.168.1.100
+2025-06-15 10:00:06 WARN - Request rate limit approaching: 450/500 req/s
+2025-06-15 10:00:08 INFO - GET /api/users responded in 45ms
+2025-06-15 10:00:10 ERROR - TLS handshake failed: certificate expired
+2025-06-15 10:00:12 INFO - POST /api/login responded in 120ms
+2025-06-15 10:00:14 WARN - Connection pool near capacity: 95/100
+2025-06-15 10:00:16 INFO - WebSocket connection established: client-42
+2025-06-15 10:00:18 ERROR - Request timeout: GET /api/reports (>30s)
+2025-06-15 10:00:20 INFO - Static file cache refreshed
+2025-06-15 10:00:22 INFO - CORS preflight handled for origin: https://app.example.com
+2025-06-15 10:00:24 WARN - Deprecated API endpoint called: /v1/legacy
+2025-06-15 10:00:26 INFO - Server graceful shutdown initiated
+2025-06-15 10:00:28 ERROR - Unhandled exception in worker thread #3
+2025-06-15 10:00:30 INFO - Server shutdown complete
