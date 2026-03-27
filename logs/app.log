@@ -1,15 +1,5 @@
 2025-06-15 10:00:01 INFO - Application started successfully
-2025-06-15 10:00:03 WARN - High memory usage detected: 82%
-2025-06-15 10:00:05 INFO - Processing batch job #1042
-2025-06-15 10:00:07 ERROR - Database connection timeout after 30s
-2025-06-15 10:00:09 INFO - Retrying database connection attempt 1
-2025-06-15 10:00:11 INFO - Database connection restored
-2025-06-15 10:00:13 WARN - Slow query detected: SELECT * FROM users (2.3s)
-2025-06-15 10:00:15 INFO - User login: admin@example.com
-2025-06-15 10:00:17 ERROR - Failed to send notification email: SMTP timeout
-2025-06-15 10:00:19 INFO - Cache cleared for module: auth
-2025-06-15 10:00:21 WARN - Disk usage above 90% on /var/log
-2025-06-15 10:00:23 INFO - Scheduled backup initiated
-2025-06-15 10:00:25 INFO - Backup completed in 12.4 seconds
-2025-06-15 10:00:27 ERROR - Permission denied: /etc/secrets.conf
-2025-06-15 10:00:29 INFO - Health check passed: all services operational
+2025-06-15 10:00:03 WARN - High memory usage detected
+2025-06-15 10:00:05 INFO - Processing batch job
+2025-06-15 10:00:07 ERROR - Database connection timeout
+2025-06-15 10:00:09 INFO - Retrying database connection

@@ -1,6 +1,20 @@
-[2025-06-15 10:00:07] [ERROR] [logs/app.log] Database connection timeout after 30s
+[2025-06-15 10:00:01] [INFO ] [logs/app.log] Application started successfully
+[2025-06-15 10:00:02] [INFO ] [logs/server.log] Server listening on port 8080
+[2025-06-15 10:00:03] [WARN ] [logs/app.log] High memory usage detected
+[2025-06-15 10:00:04] [INFO ] [logs/server.log] Accepted connection from 192.168.1.100
+[2025-06-15 10:00:05] [INFO ] [logs/app.log] Processing batch job
+[2025-06-15 10:00:06] [WARN ] [logs/server.log] Request rate limit approaching: 450/500 req/s
+[2025-06-15 10:00:07] [ERROR] [logs/app.log] Database connection timeout
+[2025-06-15 10:00:08] [INFO ] [logs/server.log] GET /api/users responded in 45ms
+[2025-06-15 10:00:09] [INFO ] [logs/app.log] Retrying database connection
 [2025-06-15 10:00:10] [ERROR] [logs/server.log] TLS handshake failed: certificate expired
-[2025-06-15 10:00:17] [ERROR] [logs/app.log] Failed to send notification email: SMTP timeout
+[2025-06-15 10:00:12] [INFO ] [logs/server.log] POST /api/login responded in 120ms
+[2025-06-15 10:00:14] [WARN ] [logs/server.log] Connection pool near capacity: 95/100
+[2025-06-15 10:00:16] [INFO ] [logs/server.log] WebSocket connection established: client-42
 [2025-06-15 10:00:18] [ERROR] [logs/server.log] Request timeout: GET /api/reports (>30s)
-[2025-06-15 10:00:27] [ERROR] [logs/app.log] Permission denied: /etc/secrets.conf
+[2025-06-15 10:00:20] [INFO ] [logs/server.log] Static file cache refreshed
+[2025-06-15 10:00:22] [INFO ] [logs/server.log] CORS preflight handled for origin: https://app.example.com
+[2025-06-15 10:00:24] [WARN ] [logs/server.log] Deprecated API endpoint called: /v1/legacy
+[2025-06-15 10:00:26] [INFO ] [logs/server.log] Server graceful shutdown initiated
 [2025-06-15 10:00:28] [ERROR] [logs/server.log] Unhandled exception in worker thread #3
+[2025-06-15 10:00:30] [INFO ] [logs/server.log] Server shutdown complete
